@@ -1,32 +1,37 @@
 import './App.css';
 import Header from './TaskComponents/Header';
 import {Tasks} from './TaskComponents/Tasks';
-import {NewTask} from './TaskComponents/NewTask';
+import {Task} from './TaskComponents/Task';
 import {Footer} from './TaskComponents/Footer';
+import { useState } from 'react';
 
 function App() {
-  let fake_tasks = [
-    {
-      "sno.":1, 
-      "Task":"Eat Breakfast",
-      "Desc":"You need to have your breakfast at 8 am!"
+  const removeMethod = (task) => {
+console.log("I am removing task number ", task.sno);
+updateTasks(tasks.filter((f)=>{return f!==task}));
+  }
+
+  const [tasks, updateTasks] = useState([
+    {sno :1, 
+      title :"Eat Breakfast",
+      Desc :"You need to have your breakfast at 8 am!"
     },
     {
-      "sno.":2, 
-      "Task":"Take a shower",
-      "Desc":"You need to have your shower after 1 hours of breakfast."
+      sno:2, 
+      title:"Take a shower",
+      Desc:"You need to have your shower after 1 hours of breakfast."
     },
     {
-      "sno.":1, 
-      "Task":"call the cab",
-      "Desc":"You need to have to get ready and call the cab to go to the office at 10am."
-    }
-  ]
+      sno:3, 
+      title:"call the cab",
+      Desc:"You need to have to get ready and call the cab to go to the office at 10am."
+    },
+  ]);
   return (
     <>
-    <Header theme={7}/>
-    <NewTask/>
-    <Tasks alltasks={fake_tasks}/>
+    <Header theme="dark"/>
+    {/* <Task/> */}
+    <Tasks tasks={tasks} removeMethod = {removeMethod}/>
     <Footer/>
     </>
   );
