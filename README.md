@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Maven - Task Manager Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+**Maven** is a task manager application built using React. It provides a simple yet elegant way to manage your tasks with features such as dark and light mode functionalities, task addition and removal, and data persistence through localStorage. Maven is fully responsive and incorporates Bootstrap for styling, making it a project suitable for both beginners and intermediate developers.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Dark and Light Mode**: Toggle between dark and light themes for a comfortable viewing experience.
+- **Add New Task**: Easily add new tasks through the intuitive interface.
+- **Task Management**: View tasks in a left-to-right fashion, from newest to oldest.
+- **Remove Task**: Remove tasks once they are completed with a simple click.
+- **Local Storage**: Task data is stored in the browser's local storage, ensuring persistence across sessions.
+- **Help Page**: A dedicated help page to guide users on how to use the application.
+- **Responsive Design**: Fully responsive layout that works seamlessly on various devices.
+- **Bootstrap Integration**: Utilizes Bootstrap for enhanced styling and layout.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/maven-task-manager.git
+    cd maven-task-manager
+    ```
 
-### `npm test`
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. **Start the development server**:
+    ```bash
+    npm start
+    ```
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Add a New Task**: Enter the task title and description in the provided fields and click the "Add Task" button.
+2. **View Tasks**: Newly added tasks will appear from left to right in the order of newest to oldest.
+3. **Remove a Task**: Click the remove button on a task to delete it from the list.
+4. **Toggle Theme**: Use the theme toggle button in the header to switch between dark and light modes.
+5. **Help Page**: Visit the help page for a detailed guide on how to use the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `src/`: Contains the source code of the application.
+  - `components/`: Reusable React components.
+  - `stylingFiles/`: CSS files for component-specific styling.
+  - `App.js`: Main application component.
+  - `index.js`: Entry point for the React application.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React**: JavaScript library for building user interfaces.
+- **Bootstrap**: CSS framework for responsive design.
+- **localStorage**: Web API for storing data in the browser.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Light Mode
+![Light Mode](screenshots/light-mode.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Dark Mode
+![Dark Mode](screenshots/dark-mode.png)
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy managing your tasks with Maven! If you have any questions or need further assistance, feel free to reach out.
