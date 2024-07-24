@@ -12,6 +12,11 @@ import {
 import { Help } from './TaskComponents/Help';
 
 function App() {
+  const [theme, setToggleTheme] = useState(false);
+
+  const handleToggle = () => {
+    setToggleTheme(!theme);
+  };
     // Initialize allTasks from localStorage if it exists, otherwise set it to an empty array
     let allTasks;
     if (localStorage.getItem("tasks") === null) {
@@ -63,17 +68,17 @@ function App() {
     return (
       <>
       <Router>
-          <Header theme="dark" />
+          <Header theme={theme} onToggle={handleToggle}/>
           <Routes>
             <Route exact path="/" element={
               <>
-                  <NewTask addNewTask={addNewTask} />
-                  <Tasks tasks={tasks} removeMethod={removeMethod} />
+                  <NewTask addNewTask={addNewTask} theme={theme}/>
+                  <Tasks tasks={tasks} removeMethod={removeMethod} theme={theme}/>
               </>
             } />
-            <Route path="/help" element={<Help />} />
+            <Route path="/help" element={<Help theme={theme}/>} />
           </Routes>
-          <Footer />
+          <Footer theme={theme}/>
         </Router>
       </>
   );
