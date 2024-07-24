@@ -12,6 +12,7 @@ import {
 import { Help } from './TaskComponents/Help';
 
 function App() {
+  const theme = "dark";
     // Initialize allTasks from localStorage if it exists, otherwise set it to an empty array
     let allTasks;
     if (localStorage.getItem("tasks") === null) {
@@ -63,17 +64,17 @@ function App() {
     return (
       <>
       <Router>
-          <Header theme="dark" />
+          <Header theme={theme} />
           <Routes>
             <Route exact path="/" element={
               <>
-                  <NewTask addNewTask={addNewTask} />
-                  <Tasks tasks={tasks} removeMethod={removeMethod} />
+                  <NewTask addNewTask={addNewTask} theme={theme}/>
+                  <Tasks tasks={tasks} removeMethod={removeMethod} theme={theme}/>
               </>
             } />
             <Route path="/help" element={<Help />} />
           </Routes>
-          <Footer />
+          <Footer theme={theme}/>
         </Router>
       </>
   );

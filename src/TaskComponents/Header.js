@@ -4,11 +4,11 @@ import {Link} from "react-router-dom"
 
 export default function Header(props) {
     let class_name_var_dark ="navbar navbar-expand-lg navbar-dark bg-dark";
-    let class_name_var_light="navbar navbar-expand-lg navbar-light"; 
-    let light_style_var={backgroundColor: "#e3f2fd"};
+    let class_name_var_light="navbar navbar-expand-lg navbar-dark"; 
+    let light_style_var={backgroundColor: "#0a4275"};
 
     const class_name = props.theme === "dark" ? class_name_var_dark: class_name_var_light;
-    const style_type = props.theme === "dark" ? {}: light_style_var;
+    const style_type = props.theme === "dark " ? {}: light_style_var;
   return (
 
 <nav className={class_name} style={style_type}>
