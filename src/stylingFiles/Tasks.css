@@ -64,6 +64,7 @@
   /* card specific */
  .card-dark{
     background-color: #ffdb00;
+    height: 100%;
  }
 
  .btn-outline-secondary {

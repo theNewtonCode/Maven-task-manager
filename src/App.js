@@ -76,7 +76,7 @@ function App() {
                   <Tasks tasks={tasks} removeMethod={removeMethod} theme={theme}/>
               </>
             } />
-            <Route path="/help" element={<Help />} />
+            <Route path="/help" element={<Help theme={theme}/>} />
           </Routes>
           <Footer theme={theme}/>
         </Router>
