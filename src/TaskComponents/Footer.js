@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Footer = (props) =>{
 
-  const theme_color_major = props.theme === "dark" ? "#212121": "#0a4275";
+  const theme_color_major = props.theme ? "#212121": "#0a4275";
 
   return (
     <div >

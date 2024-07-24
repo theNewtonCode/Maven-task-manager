@@ -15,13 +15,13 @@ export const NewTask = ({ addNewTask, theme }) => {
       setDesc("");
     }
   }
-  const theme_color_major = theme === "dark" ? {backgroundColor:"black"}: {};
-  const theme_text = theme === "dark" ? {color:"white", fontSize: '54px'}: {};
-  const form_theme = theme === "dark" ? {backgroundColor:"#a2a2a233", color:"white"}:{};
+  const theme_color_major = theme ? {backgroundColor:"black"}: {};
+  const theme_text = theme ? {color:"white", fontSize: '54px'}: {};
+  const form_theme = theme ? {backgroundColor:"#a2a2a233", color:"white"}:{};
 
-  const form_input_theme_class = theme === "dark" ? "form-control text-theme placeholder-design":"form-control";
+  const form_input_theme_class = theme ? "form-control text-theme placeholder-design":"form-control";
   
-  const form_btn_theme = theme === "dark" ? {backgroundColor:"#1bff4f"}:{};
+  const form_btn_theme = theme ? {backgroundColor:"#1bff4f"}:{};
 
   return (
     <div className='new-task-container' style={theme_color_major}>

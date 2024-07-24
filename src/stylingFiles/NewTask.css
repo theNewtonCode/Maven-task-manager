@@ -1,13 +1,12 @@
 .new-task-container {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 20px;
-    gap: 10px;
+    gap: 20px;
   }
   
   .form-section {
-    flex: 1;
     display: flex;
     justify-content: center;
     margin-top: 3vh;
@@ -37,11 +36,13 @@
     padding: 10px;
     border: 1px solid #aaaaaa;
     border-radius: 4px;
-    background-color:#fdfdfd29;
+    background-color: #fdfdfd29;
   }
-  .text-theme{
+  
+  .text-theme {
     color: white;
   }
+  
   .placeholder-design::placeholder {
     color: #87cb4b; /* Set your desired color here */
     opacity: 1; /* Ensures the color is applied in some browsers */
@@ -55,7 +56,7 @@
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
     box-shadow: 0 0 10px rgba(40, 167, 69, 0.6); /* Glow effect */
   }
   
@@ -80,5 +81,23 @@
   .company-name {
     font-size: 36px;
     font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .new-task-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-section, .company-section {
+      margin-top: 20px;
+    }
+  
+    .company-name {
+      font-size: 24px;
+    }
+  
+    .company-logo {
+      width: 80px;
+    }
   }
   
