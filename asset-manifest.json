@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Maven-task-manager/static/css/main.1849d3ab.css",
+    "main.js": "/Maven-task-manager/static/js/main.b6e45567.js",
+    "static/js/453.a53b11f0.chunk.js": "/Maven-task-manager/static/js/453.a53b11f0.chunk.js",
+    "index.html": "/Maven-task-manager/index.html",
+    "main.1849d3ab.css.map": "/Maven-task-manager/static/css/main.1849d3ab.css.map",
+    "main.b6e45567.js.map": "/Maven-task-manager/static/js/main.b6e45567.js.map",
+    "453.a53b11f0.chunk.js.map": "/Maven-task-manager/static/js/453.a53b11f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1849d3ab.css",
+    "static/js/main.b6e45567.js"
+  ]
+}
