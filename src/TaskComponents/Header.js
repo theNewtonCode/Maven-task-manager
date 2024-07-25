@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from "react-router-dom"
+import { ToggleInput } from './ToggleInput';
 
 export default function Header(props) {
     let class_name_var_dark ="navbar navbar-expand-lg navbar-dark bg-dark";
-    let class_name_var_light="navbar navbar-expand-lg navbar-light"; 
-    let light_style_var={backgroundColor: "#e3f2fd"};
+    let class_name_var_light="navbar navbar-expand-lg navbar-dark"; 
+    let light_style_var={backgroundColor: "#0a4275"};
 
-    const class_name = props.theme === "dark" ? class_name_var_dark: class_name_var_light;
-    const style_type = props.theme === "dark" ? {}: light_style_var;
+    const class_name = props.theme ? class_name_var_dark: class_name_var_light;
+    const style_type = props.theme ? {}: light_style_var;
   return (
 
 <nav className={class_name} style={style_type}>
@@ -36,10 +37,7 @@ export default function Header(props) {
           </ul>
         </li>
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <ToggleInput onToggle={props.onToggle}/>
     </div>
   </div>
 </nav>
@@ -48,7 +46,7 @@ export default function Header(props) {
 
 // setting prop datatype
 Header.propTypes = {
-theme : PropTypes.string
+theme : PropTypes.bool
 }
 
 Header.defaultProps ={
