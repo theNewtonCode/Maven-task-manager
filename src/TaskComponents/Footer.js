@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export const Footer = (props) =>{
 
@@ -23,7 +23,7 @@ export const Footer = (props) =>{
         </div>
         <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
           © 2024 Copyright:
-          <Link className="text-white" to="/" style={{textDecoration:"None"}}> MavenTasks.com</Link>
+          <a className="text-white" href="/" style={{textDecoration:"None"}}> MavenTasks.com</a>
         </div>
       </footer>
     </section>

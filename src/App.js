@@ -4,12 +4,12 @@ import { Tasks } from './TaskComponents/Tasks';
 import { Footer } from './TaskComponents/Footer';
 import { useState, useEffect } from 'react';
 import { NewTask } from './TaskComponents/NewTask';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
-import { Help } from './TaskComponents/Help';
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
+// import { Help } from './TaskComponents/Help';
 
 function App() {
   const [theme, setToggleTheme] = useState(false);
@@ -67,19 +67,19 @@ function App() {
 
     return (
       <>
-      <Router>
+      {/* <Router> */}
           <Header theme={theme} onToggle={handleToggle}/>
-          <Routes>
-            <Route exact path="/" element={
-              <>
+          {/* <Routes> */}
+            {/* <Route exact path="/" element={ */}
+              {/* <> */}
                   <NewTask addNewTask={addNewTask} theme={theme}/>
                   <Tasks tasks={tasks} removeMethod={removeMethod} theme={theme}/>
-              </>
-            } />
-            <Route path="/help" element={<Help theme={theme}/>} />
-          </Routes>
+              {/* </> */}
+            {/* } /> */}
+            {/* <Route path="/help" element={<Help theme={theme}/>} /> */}
+          {/* </Routes> */}
           <Footer theme={theme}/>
-        </Router>
+        {/* </Router> */}
       </>
   );
 }
